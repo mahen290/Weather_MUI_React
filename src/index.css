@@ -1,0 +1,14 @@
+*
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 2px;
+    }
+body
+    {
+        background-color: rgb(67, 65, 65);
+    }

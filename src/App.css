@@ -1,0 +1,21 @@
+h1 
+    {
+        width: 100%;
+        height: 10rem;
+        padding: 3.6rem;
+        background: linear-gradient(rgb(205, 2, 219), rgb(117, 2, 104));
+        font-size: 36px;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
+    }
+
+.btn_style 
+    {
+        margin-left: 50px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
