@@ -8,14 +8,5 @@ h1
         color: white;
         text-shadow: 2px 2px 2px black;
         text-align: center;
-    }
-
-.btn_style 
-    {
-        margin-left: 50px;
-        margin-top: 50px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        letter-spacing: 1px;
     }
