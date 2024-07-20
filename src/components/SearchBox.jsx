@@ -27,7 +27,7 @@ function SearchBox() {
           weather_type: jsonResponse.weather[0].description,
           wind_speed:   jsonResponse.wind.speed
         };
-        console.log("WeatherDataResult", WeatherResult);
+        console.log("WeatherResult", WeatherResult);
       };
 
   const CityChanger = (event) => {
@@ -49,7 +49,7 @@ function SearchBox() {
       <form onSubmit = { HandleSubmit }>
         <TextField id = "city" label = "city name" variant = "outlined" value = { city } onChange = { CityChanger } required />
         <br /> <br />
-        <Button variant = "contained" type = "submit"> SUBMIT </Button>
+        <Button variant = "contained" type = "submit"> SEARCH </Button>
       </form>
       </div> 
     </div>

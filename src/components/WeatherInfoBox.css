@@ -1,0 +1,8 @@
+.Weather_init_img
+{
+    width: 54%;
+    height: 330px;
+    margin: 2rem auto;
+    background: linear-gradient(rgb(213, 177, 123), rgb(211, 192, 165));
+    text-align: center;
+}
