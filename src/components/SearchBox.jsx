@@ -13,7 +13,7 @@ function SearchBox() {
 
       async function WeatherDataFetch() {
 
-        const response = await fetch( `${API_url}?q=${city}&appid=${API_key}` );
+        const response = await fetch( `${API_url}?q=${city}&appid=${API_key}&units=metric` );
         const jsonResponse = await response.json();
         console.log("response", jsonResponse);
 
