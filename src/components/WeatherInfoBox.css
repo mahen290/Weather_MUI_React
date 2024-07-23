@@ -1,8 +1,12 @@
 .Weather_init_img
 {
     width: 54%;
-    height: 330px;
+    height: 270px;
     margin: 2rem auto;
     background: linear-gradient(rgb(213, 177, 123), rgb(211, 192, 165));
     text-align: center;
+}
+.init_img
+{
+    opacity: 0.66;
 }

@@ -7,10 +7,19 @@
         background: linear-gradient(rgb(213, 177, 123), rgb(211, 192, 165));
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: bolder;
         text-shadow: 1px 1px 1px black;
         letter-spacing: 1px;
+    }
+.city_color
+    {
+        color: green;
+        font-size: 26px;
+        font-weight: bolder;
+        text-decoration: underline;
+        letter-spacing: 3px;
+        text-transform: uppercase;
     }

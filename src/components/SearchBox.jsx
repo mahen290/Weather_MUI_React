@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 
-function SearchBox() {
+function SearchBox( Updated_Weather_Info ) {
 
   const [ city, setCity ] = useState(" ");
 
@@ -28,23 +28,23 @@ function SearchBox() {
           wind_speed:   jsonResponse.wind.speed
         };
         console.log("WeatherResult", WeatherResult);
+        return WeatherResult;
       };
-
+      
   const CityChanger = (event) => {
     console.log(event);
     setCity(event.target.value);
   };
 
-  const HandleSubmit = (event) => {
-    event.preventDefault();
-    WeatherDataFetch();
-    console.log(city);
+  const HandleSubmit = async (event) => {
     setCity(" ");
+    const New_Weather_Result = await WeatherDataFetch();
+    New_Weather_Result = { Updated_Weather_Info }
   };
 
   return (
     <div>
-      <h2> Search Current Status Of WEATHER </h2>
+      <h2> SEARCH current status of WEATHER </h2>
       <div className = "SearchForm">
       <form onSubmit = { HandleSubmit }>
         <TextField id = "city" label = "city name" variant = "outlined" value = { city } onChange = { CityChanger } required />
