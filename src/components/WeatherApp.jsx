@@ -16,9 +16,9 @@ function WeatherApp() {
         wind_speed:   "5.4 kmph"
     });
 
-    const Updated_Weather = ( New_Weather_Result ) =>
+    const Updated_Weather = ( NewWeather_Info ) =>
       {
-        setWeatherInfo ( New_Weather_Result );
+        setWeatherInfo ( NewWeather_Info );
       }
   return (
     <div>

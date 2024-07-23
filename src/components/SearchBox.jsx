@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 
-function SearchBox( Updated_Weather_Info ) {
+function SearchBox(  { Updated_Weather_Info } ) {
 
   const [ city, setCity ] = useState(" ");
 
@@ -30,16 +30,17 @@ function SearchBox( Updated_Weather_Info ) {
         console.log("WeatherResult", WeatherResult);
         return WeatherResult;
       };
-      
+
   const CityChanger = (event) => {
     console.log(event);
     setCity(event.target.value);
   };
 
   const HandleSubmit = async (event) => {
-    setCity(" ");
-    const New_Weather_Result = await WeatherDataFetch();
-    New_Weather_Result = { Updated_Weather_Info }
+    event.preventDefault();
+    const NewWeather_Info = await WeatherDataFetch();
+    Updated_Weather_Info = NewWeather_Info;
+    setCity("");
   };
 
   return (
