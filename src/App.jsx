@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import WeatherApp from './components/WeatherApp';
+import SearchBox from './components/SearchBox';
+import WeatherInfoBox from './components/WeatherInfoBox';
+
 
 function App() {
   return (
     <div>
       <h1> My Weather Widget Using React With Material UI </h1>
-      <WeatherApp />
+      <SearchBox />
+      <WeatherInfoBox />
     </div>
   )
 }

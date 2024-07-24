@@ -1,23 +1,24 @@
 import React from 'react';
 import './SearchBox.css';
+import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { useState } from 'react';
 
-function SearchBox(  { Updated_Weather_Info } ) {
-
+function SearchBox() 
+{
   const [ city, setCity ] = useState(" ");
 
   const API_url = "https://api.openweathermap.org/data/2.5/weather";
   const API_key = "5745ca9045f452547453cf0a524983a6";
 
-      async function WeatherDataFetch() {
-
+      async function WeatherDataFetch() 
+      {
         const response = await fetch( `${API_url}?q=${city}&appid=${API_key}&units=metric` );
         const jsonResponse = await response.json();
         console.log("response", jsonResponse);
 
         const WeatherResult = {
+          city: "Default City",
           current_temp: jsonResponse.main.temp,
           minimum_temp: jsonResponse.main.temp_min,
           maximum_temp: jsonResponse.main.temp_max,
@@ -32,16 +33,15 @@ function SearchBox(  { Updated_Weather_Info } ) {
       };
 
   const CityChanger = (event) => {
-    console.log(event);
-    setCity(event.target.value);
-  };
+      console.log(event);
+      setCity(event.target.value);
+    };
 
-  const HandleSubmit = async (event) => {
-    event.preventDefault();
-    const NewWeather_Info = await WeatherDataFetch();
-    Updated_Weather_Info = NewWeather_Info;
-    setCity("");
-  };
+  const HandleSubmit = (event) => {
+      event.preventDefault();
+      setCity("");
+      WeatherDataFetch();
+    };
 
   return (
     <div>
