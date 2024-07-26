@@ -1,14 +1,17 @@
 import React from 'react';
-import WeatherImage from '../assets/Weather_Report_Radar.jpg';
+import WeatherImage from '../assets/MyWallpaper_220724.jpg';
+import Cold_Weather from '../assets/Cold_Weather_Img.jpg';
+import Hot_Weather from '../assets/Hot_Weather_Img.jpg';
+import Rainy_Weather from '../assets/Rainy_Weather_Img.jpg';
 import './WeatherInfoBox.css';
 
 function WeatherInfoBox( { Weather_Info } ) {
 
-    const initial_image = WeatherImage;
-
   return (
     <div className = "WeatherInfo_Container">
-      <img className = "init_img" src = { initial_image } width = "730" height = "270" alt = " " />
+      <img className = "init_img" src = { Weather_Info.moisture >= 88 && Weather_Info.current_temp <= 26 ? Rainy_Weather : WeatherImage } width = "730" height = "270" alt = " " />
+
+
       <div className = "city_selector"> { Weather_Info.city } </div>
         <div className = "WeatherInfo">
           <p> Current Temperature = { Weather_Info.current_temp }&deg; C </p> 
