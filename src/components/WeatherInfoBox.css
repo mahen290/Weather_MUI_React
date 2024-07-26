@@ -15,7 +15,8 @@
     }
 .city_selector
     {
-        margin-top: 1rem;
+        padding: 1rem 0rem;
+        background-color: rgb(7, 107, 189);
         color: white;
         font-size: 31px;
         font-weight: bolder;
