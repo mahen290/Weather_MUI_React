@@ -9,5 +9,6 @@
     }
 body
     {
-        background-color: rgb(121, 118, 118);
+        background: linear-gradient(black, rgb(161, 141, 141), black);
+        height: 83rem;
     }

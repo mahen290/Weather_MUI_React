@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 
 function SearchBox( { Updated_Weather_Data } ) 
 {
-  const [ city, setCity ] = useState(" ");
+  const [ city, setCity ] = useState("");
   const [ error, setError ] = useState(false);
 
   const API_url = "https://api.openweathermap.org/data/2.5/weather";
@@ -15,13 +15,13 @@ function SearchBox( { Updated_Weather_Data } )
       async function WeatherDataFetch() 
       {
         try
-        {
-          const response = await fetch( `${API_url}?q=${city}&appid=${API_key}&units=metric` );
-          const jsonResponse = await response.json();
-          console.log("Response", jsonResponse);
+          {
+            const response = await fetch( `${API_url}?q=${city}&appid=${API_key}&units=metric` );
+            const jsonResponse = await response.json();
+            console.log("Response", jsonResponse);
     
             const WeatherResult = {
-                city: `${"city :"+city}`,
+                city: `${"city : "+city}`,
                 current_temp: jsonResponse.main.temp,
                 minimum_temp: jsonResponse.main.temp_min,
                 maximum_temp: jsonResponse.main.temp_max,
@@ -33,13 +33,13 @@ function SearchBox( { Updated_Weather_Data } )
               };
                 console.log("WeatherResult", WeatherResult);
                 return WeatherResult;
-        }
+          }
         catch(err)
-        {
-          throw err;
-        }
+          {
+            throw (err);
+          }
       }
-  
+
         const CityChanger = (event) => {
           console.log(event);
           setCity(event.target.value);
@@ -51,7 +51,7 @@ function SearchBox( { Updated_Weather_Data } )
             event.preventDefault();
             const New_Weather_Info = await WeatherDataFetch();
             Updated_Weather_Data( New_Weather_Info );
-            setCity(" ");
+            setCity("");
           }
         catch(err)
           {
@@ -64,10 +64,10 @@ function SearchBox( { Updated_Weather_Data } )
       <h2> SEARCH current status of WEATHER </h2>
       <div className = "SearchForm">
       <form onSubmit = { HandleSubmit }>
-        <TextField id = "city" label = "city name" variant = "outlined" value = { city } onChange = { CityChanger } required />
+        <TextField id = "city" label = "City Name" variant = "outlined" value={city} onChange = { CityChanger } required />
         <br /> <br />
         <Button variant = "contained" type = "submit"> SEARCH </Button>
-        { error && <div className = "err_msg"> This Place Does Not Exists In Our API...! </div> }
+        { error && <div className = "err_msg"> This Place Does Not Exists In Our API ! </div>}
       </form>
       </div> 
     </div>

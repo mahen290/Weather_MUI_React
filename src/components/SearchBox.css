@@ -2,9 +2,13 @@ h2
     {
         width: 54%;
         height: 6rem;
-        margin: 2rem auto;
+        margin: 0rem auto;
+        margin-top: 4rem;
         padding: 1.89rem;
         background: linear-gradient(rgb(213, 177, 123), rgb(211, 192, 165));
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-right: 2px solid white; 
         font-size: 31px;
         font-weight: bolder;
         color:rgb(167, 7, 189);
@@ -16,9 +20,11 @@ h2
     {
         width: 54%;
         height: auto;
-        margin: 1rem auto;
+        margin: 0rem auto;
         padding: 1rem;
-        background: linear-gradient(rgb(213, 177, 123), rgb(211, 192, 165));
+        background: linear-gradient(rgb(211, 192, 165), rgb(213, 177, 123));
+        border-left: 2px solid white;
+        border-right: 2px solid white;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
