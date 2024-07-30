@@ -51,7 +51,8 @@ function SearchBox( { Updated_Weather_Data } )
             event.preventDefault();
             const New_Weather_Info = await WeatherDataFetch();
             Updated_Weather_Data( New_Weather_Info );
-            setCity("");
+            setCity(" ");
+            setError(false);
           }
         catch(err)
           {
@@ -67,7 +68,7 @@ function SearchBox( { Updated_Weather_Data } )
         <TextField id = "city" label = "City Name" variant = "outlined" value={city} onChange = { CityChanger } required />
         <br /> <br />
         <Button variant = "contained" type = "submit"> SEARCH </Button>
-        { error && <div className = "err_msg"> This Place Does Not Exists In Our API ! </div>}
+        { error ? <div className = "err_msg"> This Place Does Not Exists In API </div> : " " }
       </form>
       </div> 
     </div>

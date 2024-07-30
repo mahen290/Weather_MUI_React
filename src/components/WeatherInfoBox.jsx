@@ -32,8 +32,8 @@ function WeatherInfoBox( { Weather_Info } ) {
           <hr className ="hr" size = "1" color = "indigo" />
 
           <p> Air Pressure = { Weather_Info.air_pressure } </p>
-          <p> Humidity = { Weather_Info.moisture } </p>
-          <p> Wind Speed = { Weather_Info.wind_speed } </p>
+          <p> Humidity = { Weather_Info.moisture } &#37; </p>
+          <p> Wind Speed = { Weather_Info.wind_speed + " Kmph" }</p>
           <p> Weather Type = { Weather_Info.weather_type } </p>
         </div>
       </div>
